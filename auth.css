@@ -127,3 +127,44 @@ body {
     font-size: 25px;
   }
 }
+/* FITZONE Glass Login Design */
+
+.auth-box {
+  background: rgba(5, 12, 25, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 2px solid #087cff;
+  border-radius: 25px;
+  box-shadow:
+    0 0 15px #087cff,
+    0 0 40px rgba(8, 124, 255, 0.45);
+  padding: 40px 30px;
+}
+
+.auth-box input {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #6686a8;
+  color: white;
+  border-radius: 14px;
+}
+
+.auth-box input:focus {
+  border-color: #087cff;
+  box-shadow: 0 0 12px #087cff;
+  outline: none;
+}
+
+.auth-box button {
+  background: linear-gradient(90deg, #00aaff, #0055ff);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 18px #087cff80;
+}
+
+.auth-box button:hover {
+  box-shadow: 0 0 28px #087cff;
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
