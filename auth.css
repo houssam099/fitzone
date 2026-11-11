@@ -181,3 +181,18 @@ body {
   font-weight: 900;
   text-shadow: 0 0 12px rgba(8, 124, 255, 0.25);
 }
+#logout-btn {
+    background: linear-gradient(90deg, #00aaff, #0055ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #087cff;
+}
+
+#logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px #087cff;
+}
