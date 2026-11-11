@@ -99,7 +99,7 @@ form.addEventListener("submit", async (e) => {
       message.textContent = "Welcome to FITZONE!";
 
       setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "home.html";
       }, 1200);
     }
   } catch (error) {

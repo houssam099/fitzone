@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FITZONE - عالم كمال الأجسام واللياقة البدنية">
+    <title>FITZONE | عالم اللياقة البدنية</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div class="loader" id="loader">
+    <h1>FIT<span>ZONE</span></h1>
+    <div class="loader-line"></div>
+</div>
+
+<!-- Navigation -->
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="#" class="logo">FIT<span>ZONE</span></a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+            <li><a href="#muscles" data-i18n="navMuscles">العضلات</a></li>
+            <li><a href="#programs" data-i18n="navPrograms">البرامج</a></li>
+            <li><a href="#nutrition" data-i18n="navNutrition">التغذية</a></li>
+            <li><a href="#contact" data-i18n="navContact">اتصل بنا</a></li>
+            <li><a href="login.html" class="login-btn">LOGIN / SIGN UP</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="langBtn" class="lang-btn">EN</button>
+            <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+        </div>
+
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content reveal">
+
+        <span class="hero-label" data-i18n="heroLabel">
+            ابدأ رحلتك نحو القوة
+        </span>
+
+        <h1 data-i18n="heroTitle">
+            ابنِ جسمك<br>
+            <span>واصنع قوتك</span>
+        </h1>
+
+        <p data-i18n="heroDesc">
+            اكتشف عالم كمال الأجسام واللياقة البدنية.
+            تعلم التمارين الصحيحة وطور جسمك خطوة بخطوة.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#muscles" class="btn btn-primary" data-i18n="heroBtn1">
+                اكتشف التمارين
+            </a>
+
+            <a href="#about" class="btn btn-outline" data-i18n="heroBtn2">
+                اكتشف المزيد
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+        <span>01 / 04</span>
+        <span>FITNESS • STRENGTH • HEALTH</span>
+    </div>
+</section>
+
+<!-- About -->
+<section class="section container" id="about">
+
+    <div class="section-heading reveal">
+        <span class="section-tag" data-i18n="aboutTag">من نحن</span>
+        <h2 data-i18n="aboutTitle">أكثر من مجرد <span>رياضة</span></h2>
+        <p data-i18n="aboutDesc">
+            FITZONE هو دليلك لاكتشاف عالم اللياقة البدنية
+            وبناء جسم صحي وقوي.
+        </p>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-image reveal">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900"
+                 alt="صالة رياضية حديثة">
+            <div class="image-badge">
+                <strong>FITZONE</strong>
+                <span>YOUR FITNESS JOURNEY</span>
+            </div>
+        </div>
+
+        <div class="about-content reveal">
+            <h3 data-i18n="aboutSubtitle">
+                قوتك تبدأ من قرارك
+            </h3>
+
+            <p data-i18n="aboutText">
+                نقدم لك معلومات وتمارين رياضية تساعدك
+                على تطوير لياقتك وتحسين أدائك.
+                سواء كنت مبتدئاً أو محترفاً، ستجد هنا
+                ما يساعدك على تحقيق أهدافك.
+            </p>
+
+            <div class="features">
+                <div>✓ <span data-i18n="feature1">تمارين مدروسة</span></div>
+                <div>✓ <span data-i18n="feature2">برامج تدريب متنوعة</span></div>
+                <div>✓ <span data-i18n="feature3">نصائح غذائية</span></div>
+                <div>✓ <span data-i18n="feature4">معلومات للمبتدئين والمحترفين</span></div>
+            </div>
+
+            <a href="#programs" class="btn btn-primary" data-i18n="aboutBtn">
+                اكتشف برامجنا
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Muscles -->
+<section class="section dark-section" id="muscles">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="section-tag" data-i18n="musclesTag">التدريب العضلي</span>
+            <h2 data-i18n="musclesTitle">
+                اكتشف <span>عضلات جسمك</span>
+            </h2>
+            <p data-i18n="musclesDesc">
+                اختر العضلة التي تريد تدريبها واكتشف تمارينها.
+            </p>
+        </div>
+
+        <div class="muscle-grid">
+
+            <article class="muscle-card reveal">
+                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=700" alt="تمارين الصدر">
+                <div class="card-info">
+                    <h3 data-i18n="chest">عضلات الصدر</h3>
+                    <p data-i18n="chestDesc">تمارين لتطوير عضلات الصدر</p>
+                    <button class="card-btn" data-muscle="chest" data-i18n="discover">اكتشف التمارين ←</button>
+                </div>
+            </article>
+
+            <article class="muscle-card reveal">
+                <img src="https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=700" alt="تمارين الظهر">
+                <div class="card-info">
+                    <h3 data-i18n="back">عضلات الظهر</h3>
+                    <p data-i18n="backDesc">قوة وتوازن للجزء الخلفي</p>
+                    <button class="card-btn" data-muscle="back" data-i18n="discover">اكتشف التمارين ←</button>
+                </div>
+            </article>
+
+            <article class="muscle-card reveal">
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=700" alt="تمارين الذراع">
+                <div class="card-info">
+                    <h3 data-i18n="arms">عضلات الذراع</h3>
+                    <p data-i18n="armsDesc">تمارين البايسبس والترايسبس</p>
+                    <button class="card-btn" data-muscle="arms" data-i18n="discover">اكتشف التمارين ←</button>
+                </div>
+            </article>
+
+            <article class="muscle-card reveal">
+                <img src="https://images.unsplash.com/photo-1534368270820-9de3d8053204?w=700" alt="تمارين الأرجل">
+                <div class="card-info">
+                    <h3 data-i18n="legs">عضلات الأرجل</h3>
+                    <p data-i18n="legsDesc">بناء القوة والتوازن</p>
+                    <button class="card-btn" data-muscle="legs" data-i18n="discover">اكتشف التمارين ←</button>
+                </div>
+            </article>
+
+            <article class="muscle-card reveal">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=700" alt="تمارين الأكتاف">
+                <div class="card-info">
+                    <h3 data-i18n="shoulders">عضلات الأكتاف</h3>
+                    <p data-i18n="shouldersDesc">تطوير قوة الكتفين</p>
+                    <button class="card-btn" data-muscle="shoulders" data-i18n="discover">اكتشف التمارين ←</button>
+                </div>
+            </article>
+
+            <article class="muscle-card reveal">
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=700" alt="تمارين البطن">
+                <div class="card-info">
+                    <h3 data-i18n="abs">عضلات البطن</h3>
+                    <p data-i18n="absDesc">تمارين تقوية عضلات البطن</p>
+                    <button class="card-btn" data-muscle="abs" data-i18n="discover">اكتشف التمارين ←</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- Programs -->
+<section class="section container" id="programs">
+
+    <div class="section-heading reveal">
+        <span class="section-tag" data-i18n="programTag">خطط التدريب</span>
+        <h2 data-i18n="programTitle">اختر <span>برنامجك</span></h2>
+        <p data-i18n="programDesc">ابدأ من مستواك وتقدم نحو أهدافك.</p>
+    </div>
+
+    <div class="program-grid">
+
+        <div class="program-card reveal">
+            <span class="program-number">01</span>
+            <h3 data-i18n="beginner">المبتدئون</h3>
+            <p data-i18n="beginnerDesc">
+                تعلم أساسيات التدريب والحركات الصحيحة.
+            </p>
+            <a href="#contact" class="text-link" data-i18n="learnMore">اعرف المزيد ←</a>
+        </div>
+
+        <div class="program-card featured reveal">
+            <span class="program-number">02</span>
+            <h3 data-i18n="intermediate">المستوى المتوسط</h3>
+            <p data-i18n="intermediateDesc">
+                طور قوتك وابدأ بتحديات جديدة.
+            </p>
+            <a href="#contact" class="text-link" data-i18n="learnMore">اعرف المزيد ←</a>
+        </div>
+
+        <div class="program-card reveal">
+            <span class="program-number">03</span>
+            <h3 data-i18n="advanced">المحترفون</h3>
+            <p data-i18n="advancedDesc">
+                ارتق بأدائك وطور برنامجك الرياضي.
+            </p>
+            <a href="#contact" class="text-link" data-i18n="learnMore">اعرف المزيد ←</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Nutrition -->
+<section class="nutrition-section" id="nutrition">
+    <div class="container nutrition-grid">
+
+        <div class="nutrition-content reveal">
+            <span class="section-tag" data-i18n="nutritionTag">التغذية الرياضية</span>
+            <h2 data-i18n="nutritionTitle">
+                جسم قوي يبدأ من <span>تغذية سليمة</span>
+            </h2>
+            <p data-i18n="nutritionDesc">
+                التغذية المتوازنة والماء والنوم الجيد
+                عناصر مهمة لدعم التدريب والتعافي.
+            </p>
+
+            <ul class="nutrition-list">
+                <li data-i18n="food1">البروتينات: دعم بناء العضلات وإصلاحها.</li>
+                <li data-i18n="food2">الكربوهيدرات: مصدر مهم للطاقة.</li>
+                <li data-i18n="food3">الدهون الصحية: دعم وظائف الجسم.</li>
+                <li data-i18n="food4">الماء: الحفاظ على الترطيب.</li>
+            </ul>
+
+        </div>
+
+        <div class="nutrition-image reveal">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900"
+                 alt="وجبة غذائية صحية">
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section container" id="contact">
+
+    <div class="section-heading reveal">
+        <span class="section-tag" data-i18n="contactTag">تواصل معنا</span>
+        <h2 data-i18n="contactTitle">ابدأ رحلتك <span>اليوم</span></h2>
+        <p data-i18n="contactDesc">
+            أرسل لنا رسالتك واستفسارك.
+        </p>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+
+        <input type="text" id="name" placeholder="الاسم الكامل" required>
+
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+
+        <textarea id="message" rows="5" placeholder="اكتب رسالتك..." required></textarea>
+
+        <button type="submit" class="btn btn-primary" data-i18n="send">
+            إرسال الرسالة
+        </button>
+
+        <p id="formMessage" aria-live="polite"></p>
+
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <a href="#" class="logo">FIT<span>ZONE</span></a>
+
+        <p data-i18n="footerText">
+            القوة تبدأ من هنا. استمر في التطور.
+        </p>
+
+        <div class="footer-bottom">
+            © 2026 FITZONE. All Rights Reserved.
+        </div>
+
+    </div>
+</footer>
+
+<!-- Exercise Modal -->
+<div class="modal" id="exerciseModal" aria-hidden="true">
+    <div class="modal-box">
+        <button class="close-modal" id="closeModal" aria-label="إغلاق">×</button>
+        <span class="section-tag">FITZONE TRAINING</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalExercises"></div>
+        <p class="modal-note" id="modalNote"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
