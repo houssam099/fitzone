@@ -106,3 +106,16 @@ form.addEventListener("submit", async (e) => {
     message.textContent = error.message;
   }
 });
+const logoutBtn = document.getElementById("logout-btn");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", async () => {
+        const { error } = await supabase.auth.signOut();
+
+        if (error) {
+            alert("Logout failed!");
+        } else {
+            window.location.href = "login.html";
+        }
+    });
+}
