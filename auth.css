@@ -168,7 +168,7 @@ body {
   transform: translateY(-2px);
   transition: 0.3s;
 }
-.auth-box h2 {
+.auth-box h1 {
   background: linear-gradient(
     90deg,
     #ffffff,
@@ -178,7 +178,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
   font-weight: 900;
-  text-shadow: 0 0 15px rgba(8, 124, 255, 0.25);
+  text-shadow: 0 0 12px rgba(8, 124, 255, 0.25);
 }
