@@ -845,3 +845,9 @@ body {
     box-shadow: 0 0 22px rgba(8, 124, 255, 0.5);
     transform: translateY(-5px);
 }
+#muscles {
+    background-image: url("./muscles-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
