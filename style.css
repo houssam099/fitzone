@@ -872,15 +872,29 @@ body {
 }
 /* Programs Section Background */
 #programs {
+    position: relative;
+    isolation: isolate;
+    background: none;
+}
+
+#programs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+
     background-image:
         linear-gradient(
             rgba(0, 0, 0, 0.35),
             rgba(0, 0, 0, 0.55)
         ),
-        url("./program-bg.png.jpeg");
+        url("./program-bg.png");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 20px;
 }
