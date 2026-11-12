@@ -846,7 +846,7 @@ body {
     transform: translateY(-5px);
 }
 #muscles {
-    background-image: url("./muscles-bg.png");
+    background-image: url("./muscles-bg.png.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
