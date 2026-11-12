@@ -367,7 +367,10 @@ body.english .image-badge {
 }
 
 .muscle-card {
-    background: #080f1c;
+    background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.25);
     overflow: hidden;
     border-radius: 9px;
     transition: .4s;
