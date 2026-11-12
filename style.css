@@ -1,5 +1,5 @@
 :root {
-    --orange: #ff6b18;
+    --orange: #168bff;
     --black: #101010;
     --dark: #171717;
     --gray: #a0a0a0;
@@ -367,7 +367,7 @@ body.english .image-badge {
 }
 
 .muscle-card {
-    background: #222;
+    background: #080f1c;
     overflow: hidden;
     border-radius: 9px;
     transition: .4s;
@@ -376,7 +376,7 @@ body.english .image-badge {
 
 .muscle-card:hover {
     transform: translateY(-10px);
-    border-color: var(--orange);
+    border-color: #168bff;
 }
 
 .muscle-card img {
@@ -395,6 +395,7 @@ body.english .image-badge {
 
 .card-info h3 {
     font-size: 22px;
+    color: #ffffff;
 }
 
 .card-info p {
@@ -406,7 +407,10 @@ body.english .image-badge {
 .card-btn {
     border: 0;
     background: transparent;
-    color: var(--orange);
+    background: linear-gradient(90deg, #ffffff, #38bdf8, #087cff);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
     font-weight: 700;
 }
 
@@ -789,4 +793,55 @@ button {
 button:hover {
     box-shadow: 0 0 20px #087cff;
     transform: translateY(-2px);
+}
+/* FITZONE BLUE & WHITE GRADIENT */
+
+h1, h2, h3 {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #38bdf8,
+        #087cff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button {
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #0755ff
+    );
+    color: #ffffff;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #087cff;
+    transform: translateY(-2px);
+}
+body {
+    background: linear-gradient(
+        135deg,
+        #05080f,
+        #0a192e,
+        #05080f
+    );
+    color: #ffffff;
+}
+.card {
+    background: #080f1c;
+    border: 1px solid #087cff;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(8, 124, 255, 0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 22px rgba(8, 124, 255, 0.5);
+    transform: translateY(-5px);
 }
