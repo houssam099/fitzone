@@ -751,3 +751,42 @@ body.english .text-link {
         transform: none;
     }
 }
+/* FITZONE DARK BLUE THEME */
+
+body {
+    background-color: #050b16;
+    color: #ffffff;
+}
+
+header {
+    background: #071426;
+    border-bottom: 1px solid #087cff;
+    box-shadow: 0 0 15px rgba(8, 124, 255, 0.3);
+}
+
+h1, h2, h3 {
+    color: #087cff;
+}
+
+a {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #00aaff;
+}
+
+button {
+    background: linear-gradient(90deg, #00aaff, #0055ff);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #087cff;
+    transform: translateY(-2px);
+}
