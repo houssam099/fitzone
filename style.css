@@ -856,9 +856,17 @@ body {
 .about-section {
     background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
     url("./fitness-bg.png.jpeg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 20px;
+
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+
+    border-radius: 0;
     padding: 60px 30px;
 }
