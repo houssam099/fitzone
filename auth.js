@@ -20,7 +20,7 @@ let signupMode = false;
 
 // التبديل بين تسجيل الدخول وإنشاء الحساب
 
-function toggleMode(e) {
+function toggleModeSafe(e) {
     e.preventDefault();
 
     signupMode = !signupMode;
