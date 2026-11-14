@@ -109,13 +109,19 @@ form.addEventListener("submit", async (e) => {
 const logoutBtn = document.getElementById("logout-btn");
 
 if (logoutBtn) {
-    logoutBtn.addEventListener("click", async () => {
-        const { error } = await supabase.auth.signOut();
+    logoutBtn.addEventListener("click", async function () {
+        try {
+            const { error } = await supabase.auth.signOut();
 
-        if (error) {
-            alert("Logout failed:" + error .message);
-        } else {
+            if (error) {
+                alert("Logout failed: " + error.message);
+                return;
+            }
+
             window.location.href = "login.html";
+
+        } catch (err) {
+            alert("Error: " + err.message);
         }
     });
 }
