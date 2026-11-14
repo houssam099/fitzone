@@ -47,7 +47,7 @@ function toggleModeSafe(e) {
 if (register && form && title && description && message) {
     register.addEventListener("click", (e) => {
         if (e.target.closest("a")) {
-            toggleMode(e);
+            toggleModeSafe(e);
         }
     });
 }
