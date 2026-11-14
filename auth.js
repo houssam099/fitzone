@@ -113,7 +113,7 @@ if (logoutBtn) {
         const { error } = await supabase.auth.signOut();
 
         if (error) {
-            alert("Logout failed!");
+            alert("Logout failed!:" + error .message);
         } else {
             window.location.href = "login.html";
         }
