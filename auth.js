@@ -17,32 +17,41 @@ const register = document.querySelector(".register");
 
 let signupMode = false;
 
+
 // التبديل بين تسجيل الدخول وإنشاء الحساب
-register.querySelector("a").addEventListener("click", (e) => {
-  e.preventDefault();
 
-  signupMode = !signupMode;
+function toggleMode(e) {
+    e.preventDefault();
 
-  title.textContent = signupMode
-    ? "Create Account"
-    : "Welcome Back!";
+    signupMode = !signupMode;
 
-  description.textContent = signupMode
-    ? "Join the FITZONE community"
-    : "Login to your FITZONE account";
+    title.textContent = signupMode
+        ? "Create Account"
+        : "Welcome Back!";
 
-  form.querySelector("button").textContent = signupMode
-    ? "CREATE ACCOUNT"
-    : "LOGIN";
+    description.textContent = signupMode
+        ? "Join the FITZONE community"
+        : "Login to your FITZONE account";
 
-  register.innerHTML = signupMode
-    ? 'Already have an account? <a href="#">Login</a>'
-    : 'Don\'t have an account? <a href="#">Create Account</a>';
+    form.querySelector("button").textContent = signupMode
+        ? "CREATE ACCOUNT"
+        : "LOGIN";
 
-  message.textContent = "";
+    register.innerHTML = signupMode
+        ? 'Already have an account? <a href="#">Login</a>'
+        : 'Don\'t have an account? <a href="#">Create Account</a>';
 
-  register.querySelector("a").addEventListener("click", toggleMode);
-});
+    message.textContent = "";
+}
+
+if (register && form && title && description && message) {
+    register.addEventListener("click", (e) => {
+        if (e.target.closest("a")) {
+            toggleMode(e);
+        }
+    });
+}
+
 
 function toggleMode(e) {
   e.preventDefault();
