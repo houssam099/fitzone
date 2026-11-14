@@ -18,9 +18,8 @@ const register = document.querySelector(".register");
 let signupMode = false;
 
 
-// التبديل بين تسجيل الدخول وإنشاء الحساب
 
-function toggleModeSafe(e) {
+function toggleMode(e) {
     e.preventDefault();
 
     signupMode = !signupMode;
@@ -44,81 +43,64 @@ function toggleModeSafe(e) {
     message.textContent = "";
 }
 
+// تبديل تسجيل الدخول وإنشاء الحساب
 if (register && form && title && description && message) {
     register.addEventListener("click", (e) => {
         if (e.target.closest("a")) {
-            toggleModeSafe(e);
+            toggleMode(e);
         }
     });
 }
 
+// تسجيل الدخول أو إنشاء الحساب
+if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-function toggleMode(e) {
-  e.preventDefault();
-  signupMode = !signupMode;
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
 
-  title.textContent = signupMode ? "Create Account" : "Welcome Back!";
-  description.textContent = signupMode
-    ? "Join the FITZONE community"
-    : "Login to your FITZONE account";
+        message.textContent = "Please wait...";
 
-  form.querySelector("button").textContent = signupMode
-    ? "CREATE ACCOUNT"
-    : "LOGIN";
+        try {
+            if (signupMode) {
+                const { data, error } = await supabase.auth.signUp({
+                    email,
+                    password
+                });
 
-  register.innerHTML = signupMode
-    ? 'Already have an account? <a href="#">Login</a>'
-    : 'Don\'t have an account? <a href="#">Create Account</a>';
+                if (error) throw error;
 
-  message.textContent = "";
-  register.querySelector("a").addEventListener("click", toggleMode);
+                message.textContent = data.session
+                    ? "Account created successfully!"
+                    : "Check your email to confirm your account.";
+
+            } else {
+                const { error } = await supabase.auth.signInWithPassword({
+                    email,
+                    password
+                });
+
+                if (error) throw error;
+
+                message.textContent = "Welcome to FITZONE!";
+
+                setTimeout(() => {
+                    window.location.href = "home.html";
+                }, 1200);
+            }
+
+        } catch (error) {
+            message.textContent = error.message;
+        }
+    });
 }
 
-// إنشاء الحساب أو تسجيل الدخول
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-
-  message.textContent = "Please wait...";
-
-  try {
-    if (signupMode) {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password
-      });
-
-      if (error) throw error;
-
-      message.textContent = data.session
-        ? "Account created successfully!"
-        : "Check your email to confirm your account.";
-
-    } else {
-      const { data, error } =
-        await supabase.auth.signInWithPassword({
-          email,
-          password
-        });
-
-      if (error) throw error;
-
-      message.textContent = "Welcome to FITZONE!";
-
-      setTimeout(() => {
-        window.location.href = "home.html";
-      }, 1200);
-    }
-  } catch (error) {
-    message.textContent = error.message;
-  }
-});
+// تسجيل الخروج
 const logoutBtn = document.getElementById("logout-btn");
 
 if (logoutBtn) {
-    logoutBtn.addEventListener("click", async function () {
+    logoutBtn.addEventListener("click", async () => {
         try {
             const { error } = await supabase.auth.signOut();
 
@@ -129,8 +111,8 @@ if (logoutBtn) {
 
             window.location.href = "login.html";
 
-        } catch (err) {
-            alert("Error: " + err.message);
+        } catch (error) {
+            alert("Error: " + error.message);
         }
     });
 }
